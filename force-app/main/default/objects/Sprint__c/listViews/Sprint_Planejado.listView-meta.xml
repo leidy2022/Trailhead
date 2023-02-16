@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sprint_Planejado</fullName>
+    <columns>NAME</columns>
+    <columns>P_Str_Date__c</columns>
+    <columns>P_End_Date__c</columns>
+    <columns>SprintEstimatedPoints__c</columns>
+    <columns>Status__c</columns>
+    <columns>Project__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ProductBacklog__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Product Backlog,Planned</value>
+    </filters>
+    <label>Sprints Planejados</label>
+</ListView>

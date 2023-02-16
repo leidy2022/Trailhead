@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ChecklistTesteFuncional__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo usado na regra de validação para obrigar etapas antes de liberar para teste</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Assinalar esse campo SE a solução foi testada pelo responsável da entrega. Testes: via interface (se foi apenar por parametrização) e via código (se precisou desenvolver classe).</inlineHelpText>
+    <label>Teste Funcional</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

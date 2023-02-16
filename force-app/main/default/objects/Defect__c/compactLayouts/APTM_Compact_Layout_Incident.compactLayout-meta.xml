@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APTM_Compact_Layout_Incident</fullName>
+    <fields>Name</fields>
+    <fields>Category__c</fields>
+    <fields>Type__c</fields>
+    <fields>Subject__c</fields>
+    <fields>Test_Scenario__c</fields>
+    <fields>Test_Case__c</fields>
+    <fields>Test_Step__c</fields>
+    <label>APTM - Compact Layout Incident</label>
+</CompactLayout>

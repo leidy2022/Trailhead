@@ -1,0 +1,129 @@
+<apex:page lightningStylesheets="true" standardController="Test_Case__c" extensions="MassUpdateTestStepsExt" sidebar="false" showHeader="false">
+    <style>
+        td a{
+            text-decoration: none;
+        }
+
+        td > a:hover{
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 14px;
+            color: blue;
+        }
+
+    </style>
+    <apex:includeScript value="{!$Resource.stJquery110}"/>
+    <apex:form >
+        <apex:pageMessages id="testStepsMessages" />
+
+        <!--don't update/delete this action function, used to refresh test steps block when new defect page is closed -->
+        <apex:actionFunction name="getTestSteps" action="{!getTestCaseAndTestSteps}" reRender="testStepsBlock, testStepsMessages" />
+
+        <apex:sectionHeader title="Run Test Steps for: {!testCase.Subject__c}" />
+        
+        <apex:pageBlock title="Test Steps" id="testStepsBlock">
+            <apex:pageBlockTable value="{!testStepList}" var="ts">
+                <apex:column style="width:5%;" >
+                    <apex:facet name="header">
+                        {!$ObjectType.Test_Steps__c.fields.Sequence__c.Label}
+                    </apex:facet>
+                    <apex:outputField value="{!ts.Sequence__c}" />
+                </apex:column>
+                <apex:column style="width:26%;">
+                    <apex:facet name="header">
+                        {!$ObjectType.Test_Steps__c.fields.Step_Details__c.Label}
+                    </apex:facet>
+                    <apex:outputField value="{!ts.Step_Details__c}" />
+                </apex:column>
+                <apex:column style="width:26%;">
+                    <apex:facet name="header">
+                        {!$ObjectType.Test_Steps__c.fields.Expected_Results__c.Label}
+                    </apex:facet>
+                    <apex:outputField value="{!ts.Expected_Results__c}" style="width:200px; height:60px;" />
+                </apex:column>
+                <apex:column style="width:10%;">
+                    <apex:facet name="header">
+                        {!$ObjectType.Test_Steps__c.fields.Actual_Results__c.Label}
+                    </apex:facet>
+                    <apex:inputField id="ts-actialResult" value="{!ts.Actual_Results__c}" style="width:150px; height:60px;" />
+                </apex:column>
+                <apex:column style="width:5%;">
+                    <apex:facet name="header">
+                        {!$ObjectType.Test_Steps__c.fields.Plan_Start_Date__c.Label}
+                    </apex:facet>
+                    <apex:outputField value="{!ts.Plan_Start_Date__c}" />
+                </apex:column>
+                <apex:column style="width:5%;">
+                    <apex:facet name="header">
+                        {!$ObjectType.Test_Steps__c.fields.Exec_Date_time__c.Label}
+                    </apex:facet>
+                    <apex:outputField value="{!ts.Exec_Date_time__c}" />
+                </apex:column>
+                <apex:column style="width:5%;">
+                    <apex:facet name="header">
+                        {!$ObjectType.Test_Steps__c.fields.Status__c.Label}
+                    </apex:facet>
+                    <apex:inputField id="ts-status" value="{!ts.Status__c}" />
+                </apex:column>
+                <apex:column style="width:8%;">
+                    <apex:facet name="header">
+                        Ações
+                    </apex:facet>
+                    <span class="btn">
+                        <a href="#" onclick="openNewDefectWindow('{!ts.Id}');" >Novo Incidente</a>
+                    </span>
+                </apex:column>
+                <apex:column style="width:8%;">
+                    <apex:facet name="header">
+                        Incidentes
+                    </apex:facet>
+                    <apex:repeat value="{!testStepIdDefectsMap[ts.Id]}" var="def" rows="3">
+                        <apex:outputLink target="_blank" value="/{!def.Id}">
+                            {!def.Name}
+                        </apex:outputLink>
+                        <br/>
+                    </apex:repeat>
+                    <apex:outputLink target="_blank" value="/apex/Defects?id={!ts.Id}" rendered="{!testStepIdDefectNumberMap[ts.Id] > 3}">
+                        More...
+                    </apex:outputLink>
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!saveTestSteps}" />
+                <input type="button" class="btn"  value="Return" onclick="checkRecords();" />
+                <apex:actionFunction name="cancelTestSteps" action="{!cancelTestSteps}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <script>
+        var isChanged = false;
+
+        $(function(){
+            $("[id$='ts-actialResult']").each(function(){
+               $(this).change(function(){
+                    isChanged = true;
+               })
+            });
+            $("[id$='ts-status']").each(function(){
+               $(this).change(function(){
+                    isChanged = true;
+               })
+            });
+        })
+
+        function openNewDefectWindow(tsid){
+            window.open('/apex/NewDefect?id=' + tsid, 'newwindow', 'height=600, width=900, top=100, left=200, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');
+        }
+
+        function checkRecords(){
+            if(isChanged == true){
+                var crm = confirm('Back without save?');
+                if(crm == true){
+                    cancelTestSteps();
+                }
+            }else{
+                cancelTestSteps();
+            }
+        }
+    </script>
+</apex:page>

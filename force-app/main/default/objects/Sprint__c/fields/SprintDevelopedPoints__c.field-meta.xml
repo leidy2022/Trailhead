@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SprintDevelopedPoints__c</fullName>
+    <externalId>false</externalId>
+    <label>Sprint Developed Points</label>
+    <summarizedField>Work__c.Points__c</summarizedField>
+    <summaryFilterItems>
+        <field>Work__c.Work_Status__c</field>
+        <operation>equals</operation>
+        <value>Done</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Work__c.Sprint__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

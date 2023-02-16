@@ -1,0 +1,501 @@
+<apex:page lightningStylesheets="true" controller="TestCaseConsoleController" sidebar="false" showHeader="false" standardStylesheets="false" docType="html-5.0" >
+    <apex:includeScript value="{!URLFOR($Resource.stJsTree, '/dist/jquery.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.stJsTree, '/dist/jstree.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.bootstrap, 'js/bootstrap.min.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.stJsTree, '/dist/themes/default/style.min.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.bootstrap, 'styles/bootstrap.min.css')}" />
+    <style type="text/css">
+        .page-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0;
+            margin: 4px 0 8px 0;
+        }
+        #search {
+            margin-bottom: 6px;
+            border-radius:5px; 
+            moz-border-radius: 5px; 
+            -webkit-border-radius: 5px;
+            border:1px solid silver;
+        }
+        .waitingDiv {
+            position: absolute;
+            text-align: center;
+            top: 0;
+            z-index: 80;
+            left: 0;
+        }
+        .waitingHolder {
+            border: none;
+            background-color: transparent;
+            font-size: 1em;
+            font-weight: normal;
+            padding: 0;
+        }
+        .waitingImage {
+            vertical-align: middle;
+        }
+
+        .testCaseRow {
+            cursor: pointer;
+        }
+
+        .table > tbody > tr > td {
+            vertical-align: middle;
+        }
+
+        td a {
+            text-decoration: none;
+        }
+
+        td > a:hover {
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 14px;
+            /*color: blue;*/
+        }
+
+        #testCasesBody {
+            max-height: 250px; 
+            overflow: auto; 
+            margin-top: -20px;
+        }
+
+        #testCasesBody tr {
+            cursor: pointer;
+        }
+
+        .selectedRow {
+            background-color: #beebff !important;
+        }
+
+        .messages {
+            display: none;
+            background-color: #ffc;
+            border-style: solid;
+            border-color: #39f;
+            border-radius: 4px;
+            border-width: 1px;
+            color: #000;
+            padding: 6px 8px 6px 6px;
+            margin: 4px 20px;
+        }
+        .sidebarMouseOver {
+            background-color: #beebff;
+        }
+        .sidebarExpand {
+            cursor: url(/img/cursors/col-expand.cur),pointer;
+        }
+        .sidebarCollapse {
+            cursor: url(/img/cursors/col-collapse.cur),pointer;
+        }
+        #sidebarContent {
+            width: 16%;
+            vertical-align: top;
+        }
+        #sidebarCell {
+            vertical-align: top;
+        }
+        #bodyCell {
+            width: 100%;
+            vertical-align: top;
+        }
+        #indicator {
+            color: blue;
+            opacity: .3;
+        }
+        .statusRed {
+            color: red;
+        }
+        .statusGreen {
+            color: green;
+        }
+        .statusGray {
+            color: gray;
+        }
+        .placeholder {
+            color: #aaa;
+        }
+    </style>
+    <apex:form >
+ 
+   
+    
+        <div class="messages" id="messagesDiv">
+            <apex:pageMessages id="messages" />
+        </div>
+
+        <div class="container" style=" width: 100%;margin-top:10px;margin-bottom:5px;">
+            <div class="row">
+                <div class="col-md-11 ">
+                  <h4>Console de Cenários de Teste</h4>
+                </div>
+                <div class="col-md-1 ">
+                   <a class="btn btn-default" href="../home/home.jsp" role="button">Home</a> 
+                </div>                
+            </div>
+            <table>
+                <tr>
+                    <td id="sidebarContent">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" id="search" value="" placeholder="Search..." />
+                                    </div>
+                                    <div class="col-md-12">
+                                        <a href="#" id="expandAll"><b>Expandir</b></a>
+                                        |
+                                        <a href="#" id="collapseAll"><b>Reduzir</b></a>
+                                    </div>
+                                    <div class="col-md-12" style="padding-left: 5px;">
+                                        <div id="tree"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td id="sidebarCell" class="sidebarCollapse" title="Click to Close Sidebar">
+                        <span id="indicator" class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+                    </td>
+                    <td id="bodyCell">
+                        <apex:outputPanel title="Test Cases" id="testCasesPanel">
+                        <div class="panel panel-default"> <!-- test cases -->
+                            <div class="panel-heading" id="testCaseHeader">
+                                Casos de Teste do Cenário:
+                            </div>
+                            <div class="panel-body" style="padding: 0;">
+                                <table class="table table-bordered table-hover table-condensed">
+                                    <tr>
+                                        <th style="width: 150px;">
+                                            Número
+                                        </th>                                        
+                                        <th style="width: 750px;">
+                                            {!$ObjectType.Test_Case__c.fields.Subject__c.Label}
+                                        </th>
+                                        <th style="width: auto;">
+                                            Responsável
+                                        </th>                                        
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="testCasesBody">
+                                <table class="table table-bordered table-hover table-condensed" style="margin-bottom: 0;" id="testCases">
+                                    <apex:repeat value="{!testCaseList}" var="tc">
+                                        <tr id="testCase-{!tc.Id}" onclick="showTestSteps(this, '{!tc.Id}')" subject="{!tc.Subject__c}">
+                                            <td style="width: 150px;">     
+                                                <a style="color:blue;text-decoration:underline">{!tc.No__c}</a>
+                                            </td>
+                                            <td style="width: 750px;">
+                                                <apex:outputField value="{!tc.Subject__c}" />
+                                            </td>
+                                            <td style="width: auto;">
+                                                <apex:outputField value="{!tc.Owner.Name}" />
+                                            </td>
+                                            
+                                            
+                                        </tr>
+                                    </apex:repeat>
+                                </table>
+                            </div>
+                        </div> <!-- test cases -->
+                    </apex:outputPanel>
+                    <apex:outputPanel title="Test Steps" id="testStepsPanel">
+                        <div class="panel panel-default" id="testSteps"> <!-- test steps -->
+                            <div class="panel-heading" id="testStepHeader">
+                                Test Steps of Test Case:
+                            </div>
+                            <table class="table table-bordered table-hover table-condensed">
+                                <tr>
+                                    <th>
+                                        NO.
+                                    </th>
+                                    <th>
+                                        {!$ObjectType.Test_Steps__c.fields.Step_Details__c.Label}
+                                    </th>
+                                    <th>
+                                        {!$ObjectType.Test_Steps__c.fields.Tester__c.Label}
+                                    </th>
+                                    <th>
+                                        {!$ObjectType.Test_Steps__c.fields.Expected_Results__c.Label}
+                                    </th>
+                                    <th>
+                                        {!$ObjectType.Test_Steps__c.fields.Actual_Results__c.Label}
+                                    </th>
+                                    <th>
+                                        {!$ObjectType.Test_Steps__c.fields.Plan_Start_Date__c.Label}
+                                    </th>
+                                    <th>
+                                        {!$ObjectType.Test_Steps__c.fields.Exec_Date_time__c.Label}
+                                    </th>
+                                    <th>
+                                        {!$ObjectType.Test_Steps__c.fields.Status__c.Label}
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                    <th class="headerRow">
+                                        Defects
+                                    </th>
+                                </tr>
+                                <apex:repeat value="{!testStepList}" var="ts">
+                                    <tr>
+                                        <td style="width: 3%;">
+                                            <apex:outputField value="{!ts.Sequence__c}" />
+                                        </td>
+                                        <td style="width: 15%;">
+                                            <apex:outputField value="{!ts.Step_Details__c}" />
+                                        </td>
+                                        <td style="width: 7%;">
+                                            <apex:outputField value="{!ts.Tester__r.Name}" />
+                                        </td>
+                                        <td style="width: 15%;">
+                                            <apex:outputField value="{!ts.Expected_Results__c}" style="width:200px;height:60px;" />
+                                        </td>
+                                        <td style="width:9%;">
+                                            <apex:inputField value="{!ts.Actual_Results__c}" style="width:150px;height:60px;" />
+                                        </td>
+                                        <td style="width: 7%;">
+                                            <apex:outputField value="{!ts.Plan_Start_Date__c}" />
+                                        </td>
+                                        <td style="width: 7%;">
+                                            <apex:outputField value="{!ts.Exec_Date_time__c}" />
+                                        </td>
+                                    <td style="width: 4%;">
+                                            <apex:inputField value="{!ts.Status__c}" />
+                                        </td>
+                                        <td style="width: 6%; white-space: nowrap;">
+                                            <apex:commandButton styleClass="btn btn-default btn-xs" value="New Defect" onclick="openNewDefectWindow('{!ts.Id}')" reRender="messages, hiddenPanel"/>
+                                        </td>
+                                        <td style="width: 6%; white-space: nowrap; line-height: 1.5;">
+                                            <apex:repeat value="{!testStepIdDefectsMap[ts.Id]}" var="def" rows="3">
+                                                <!--styleClass: 
+                                                {!IF(OR(def.Status__c=='New', def.Status__c=='In Progress', def.Status__c=='Re-opened'), 
+                                                    'statusRed', 
+                                                    IF(OR(def.Status__c=='Rejected', def.Status__c=='Fixed'), 
+                                                        'statusGreen', 
+                                                        IF(def.Status__c=='Closed', 
+                                                            'statusGray', 
+                                                            ''
+                                                        )
+                                                    )
+                                                )} -->
+                                                <apex:outputLink target="_blank" value="/{!def.Id}" title="{!def.Status__c}" styleClass="{!IF(OR(def.Status__c=='New',def.Status__c=='InProgress',def.Status__c=='Re-opened'),'statusRed',IF(OR(def.Status__c=='Rejected',def.Status__c=='Fixed'),'statusGreen',IF(def.Status__c=='Closed','statusGray','')))}">
+                                                    {!def.Name}
+                                                </apex:outputLink>
+                                                <br/>
+                                            </apex:repeat>
+                                            <apex:outputLink target="_blank" value="/apex/Defects?id={!ts.Id}" rendered="{!testStepIdDefectNumberMap[ts.Id] > 3}">
+                                                More...
+                                            </apex:outputLink>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </table>
+                            <div class="panel-footer" style="text-align: center;">
+                                <apex:commandButton styleClass="btn btn-default btn-sm" value="Save" action="{!saveTestSteps}" reRender="messages, testStepsPanel" oncomplete="afterSave()" status="statusWaiting" />
+                            </div>
+                        </div> <!-- test steps -->
+                    </apex:outputPanel>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <apex:outputPanel id="hiddenPanel" rendered="false">
+            <!-- Important and don't remove -> blank panel, used to be realize partial refresh for "new defect" command link -->
+        </apex:outputPanel>
+
+        <apex:actionstatus id="statusWaiting">
+            <apex:facet name="start">
+                <div class="waitingDiv" style="background-color:#dcdcdc;height:300%;opacity:0.80;filter:alpha(opacity=80);width:100%;">
+                    <div class="waitingHolder" style="position:fixed;top:50%;left:30%;width:50%;">
+                        <img class="waitingImage" src="/img/loading32.gif" title="Loading....." />
+                        <span style="font-size:20px;font-weight:bold;color:red;">
+                            Loading......
+                        </span>
+                    </div>
+                </div>
+            </apex:facet>
+        </apex:actionstatus>
+
+        <apex:actionFunction name="getTestCases" action="{!queryTestCasesBySprintIdAndScenarioId}" reRender="messages, testCasesPanel" status="statusWaiting" oncomplete="setTestCasesHeaderName();javascript:scroll(0,0)"/>
+        <apex:actionFunction name="getTestSteps" action="{!queryTestStepsByTestCaseId}" reRender="messages, testStepsPanel" status="statusWaiting" oncomplete="setTestStepsHeaderName();"/>
+
+        <apex:inputHidden id="selectedSprintId" value="{!selectedSprintId}" />
+        <apex:inputHidden id="selectedScenarioId" value="{!selectedScenarioId}" />
+        <apex:inputHidden id="selectedTestCaseId" value="{!selectedTestCaseId}" />
+
+    </apex:form>
+
+    <script>
+        
+        var selectedTestCaseId;
+        var selectedTestScenarioName;
+        var selectedTestCaseSubject;
+
+        $(function(){
+            // set place holder for IE8
+            $('[placeholder]').focus(function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                    input.removeClass('placeholder');
+                }
+            }).blur(function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.addClass('placeholder');
+                    input.val(input.attr('placeholder'));
+                }
+            }).blur();
+            // remove place holder text before submit the form
+            $('[placeholder]').parents('form').submit(function() {
+                $(this).find('[placeholder]').each(function() {
+                    var input = $(this);
+                    if (input.val() == input.attr('placeholder')) {
+                        input.val('');
+                    }
+                })
+            });
+            // hide test steps panel
+            $("#testSteps").hide();
+            // sidebar mouse over
+            $("#sidebarCell").bind("mouseover", function(){
+                $(this).addClass("sidebarMouseOver");
+            })
+            // sidebar mouse out
+            $("#sidebarCell").bind("mouseout", function(){
+                $(this).removeClass("sidebarMouseOver");
+            })
+            // sidebar click event
+            $("#sidebarCell").bind("click", function(){
+                if($(this).hasClass("sidebarExpand")){
+                    $(this).removeClass("sidebarExpand");
+                    $(this).addClass("sidebarCollapse");
+                    $(this).attr("title", "Click to Close Sidebar");
+                    $("#indicator").removeClass("glyphicon-step-forward");
+                    $("#indicator").addClass("glyphicon-step-backward");
+                }else{
+                    $(this).removeClass("sidebarCollapse");
+                    $(this).addClass("sidebarExpand");
+                    $(this).attr("title", "Click to Open Sidebar");
+                    $("#indicator").removeClass("glyphicon-step-backward");
+                    $("#indicator").addClass("glyphicon-step-forward");
+                }
+                $("#sidebarContent").toggle();
+            })
+            // initial tree
+            $('#tree').jstree({
+                "plugins" : ["search"],
+                "search" : { "show_only_matches" : true },
+                "core": {
+                    "check_callback": true,
+                    "animation": 0,
+                    "multiple": false, 
+                    "themes" : { 
+                        "responsive" : false,
+                        "icons" : false
+                    },
+                    "strings":{
+                        "Loading ...": "Please wait ..."
+                    },
+                    "data" : {!data}
+                },
+            });
+            
+            // open all
+            /*$("#tree").jstree("open_all");
+
+            $("#tree").bind("loaded.jstree", function(){
+                $("#tree").jstree("open_all");
+            })*/
+
+            // search
+            $('#search').keyup(function() {
+                var v = $('#search').val();
+                $('#tree').jstree(true).search(v);
+            });
+
+            // expand all
+            $("#expandAll").on("click", function() {
+                $("#tree").jstree("open_all");
+            })
+
+            // collapse all
+            $("#collapseAll").on("click", function() {
+                $("#tree").jstree("close_all");
+            })
+
+            // show test cases
+            $("#tree").bind("select_node.jstree", function(event, data) {
+                var parentId = data.instance.get_parent(data.selected[0]);
+                var node = data.instance.get_node(data.selected[0]);
+                if(isTestScenarioSelected(node.id)){
+                    $("[id$='selectedSprintId']").val(parentId);
+                    $("[id$='selectedScenarioId']").val(node.id);
+                    selectedTestScenarioName = node.text;
+                    $("#messagesDiv").hide();
+                    $("#testSteps").hide();
+                    getTestCases();
+                }
+            });
+
+        });
+        
+        // check whether test scenario node is clicked
+        function isTestScenarioSelected(nodeId){
+            var prefix = '{!TestScenarioPrefix}';
+            if(nodeId.substr(0, 3) == prefix){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        // set header string
+        function setTestCasesHeaderName(){
+            if(selectedTestScenarioName != null){
+                $("#testCaseHeader").text('Test Cases of Scenario: ' + selectedTestScenarioName);
+            }
+        }
+
+        // show test steps
+        function showTestSteps(t, tcId){
+            $("[id$='selectedTestCaseId']").val(tcId);
+            selectedTestCaseSubject = $(t).attr("subject");
+
+            // remove previous selected test case style
+            if(selectedTestCaseId != null){
+                $("[id$='testCase-" + selectedTestCaseId + "']").removeClass('selectedRow');
+            }
+
+            // set style for current selected test case
+            $(t).addClass('selectedRow');
+            selectedTestCaseId = tcId;
+
+            // set scroll bar location
+            // var scrollTop = $("#testCasesBody").scrollTop();
+            // $("#testCasesBody").scrollTop(event.clientY - 200 + scrollTop);
+
+            getTestSteps();
+        }
+
+        // set header string
+        function setTestStepsHeaderName(){
+            if(selectedTestCaseSubject != null){
+                $("#testStepHeader").text('Test Steps of Test Case: ' + selectedTestCaseSubject);
+                $("#messagesDiv").hide();
+                $("#testSteps").show();
+            }
+        }
+
+        // show new defect window
+        function openNewDefectWindow(tsid){
+            window.open('/apex/NewDefect?id=' + tsid, 'newwindow', 'height=600, width=900, top=100, left=200, toolbar=no, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');
+        }
+
+        function afterSave(){
+            setTestStepsHeaderName();
+            $("#messagesDiv").show();
+        }
+    </script>
+</apex:page>

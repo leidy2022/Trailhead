@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Indicate to which task your Impediment is related to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate to which task your Impediment is related to.</inlineHelpText>
+    <label>Task</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Develop_Task__c.Work__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Work__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Develop_Task__c</referenceTo>
+    <relationshipLabel>Impediments</relationshipLabel>
+    <relationshipName>Impediments</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

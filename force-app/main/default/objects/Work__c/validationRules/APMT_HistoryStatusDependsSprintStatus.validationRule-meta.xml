@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APMT_HistoryStatusDependsSprintStatus</fullName>
+    <active>true</active>
+    <description>You can only change History Status when Sprint Status is different than Planned.</description>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(Work_Status__c , &apos;Not Started&apos;)),
+ISPICKVAL( Sprint__r.Status__c  , &apos;Planned&apos;)
+)</errorConditionFormula>
+    <errorMessage>You can only start a History when the Sprint status is different than &quot;Planned&quot;.</errorMessage>
+</ValidationRule>

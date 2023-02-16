@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- APMT - Team Member --></label>
+        <name>APMT_TeamMember</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- tt_BaseURL --></label>
+        <name>trlhdtips__tt_BaseURL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ConfimCancel --></label>
+        <name>trlhdtips__tt_ConfimCancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ConfimOK --></label>
+        <name>trlhdtips__tt_ConfimOK</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_EnterPackageId --></label>
+        <name>trlhdtips__tt_EnterPackageId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_InvalidPackageId --></label>
+        <name>trlhdtips__tt_InvalidPackageId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ResetPasswordFail --></label>
+        <name>trlhdtips__tt_ResetPasswordFail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ResetPasswordSuccess --></label>
+        <name>trlhdtips__tt_ResetPasswordSuccess</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ResetPasswordTitle --></label>
+        <name>trlhdtips__tt_ResetPasswordTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ResetPasswordWarning --></label>
+        <name>trlhdtips__tt_ResetPasswordWarning</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- Initial Setup --></label>
+        <name>Configura_o_Inicial</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Product Backlog --></label>
+        <name>Product_Backlog</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Scrum Board --></label>
+        <name>Project_Dashboard</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Test Case Console --></label>
+        <name>Test_Case_Console</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <name>S_149a89f6_e93f_4402_b3c5_24148bee75c0</name>
+            </choices>
+            <choices>
+                <name>S_3792e0ac_4617_447c_b1de_9c5075f6b9d1</name>
+            </choices>
+            <choices>
+                <name>S_895a92c9_a675_4047_bd25_4b67d875a37b</name>
+            </choices>
+            <choices>
+                <name>S_a0e9d086_3411_4d8f_950d_f2758a33fc68</name>
+            </choices>
+            <choices>
+                <name>S_f6dcd3bd_2efc_4cdd_a3d5_4fb54e458aac</name>
+            </choices>
+            <screens>
+                <fields>
+                    <name>S_55cf98c1_dc1a_4104_b385_89dab3632c94</name>
+                </fields>
+                <fields>
+                    <name>S_62185e3d_591b_4ade_9910_383fb5ff11cf</name>
+                </fields>
+                <name>surveyQuestionPage</name>
+            </screens>
+            <textTemplates>
+                <name>thankYouDescriptionTextTemplate</name>
+            </textTemplates>
+            <textTemplates>
+                <name>thankYouLabelTextTemplate</name>
+            </textTemplates>
+        </flows>
+        <fullName>customer_satisfaction</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>S_50a1d272_b234_4f92_a8fe_fa15dc797af4</name>
+                </fields>
+                <fields>
+                    <name>S_8b93e61a_35a5_435c_9c3d_30831d2252d6</name>
+                </fields>
+                <name>surveyQuestionPage</name>
+            </screens>
+            <textTemplates>
+                <name>thankYouDescriptionTextTemplate</name>
+            </textTemplates>
+            <textTemplates>
+                <name>thankYouLabelTextTemplate</name>
+            </textTemplates>
+        </flows>
+        <fullName>net_promoter_score</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Sprints with Histories --></description>
+        <label><!-- Sprints with Histories --></label>
+        <name>APMT_Sprints_with_Histories</name>
+        <sections>
+            <label><!-- Sprints --></label>
+            <name>Sprints</name>
+        </sections>
+        <sections>
+            <label><!-- Trabalho --></label>
+            <name>Trabalho</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Releases com Sprints com Histórias com Impediments --></description>
+        <label><!-- Releases com Sprints com Histórias com Impediments --></label>
+        <name>Releases_com_Sprints_com_Hist_rias_com_Impediments</name>
+        <sections>
+            <label><!-- Histórias --></label>
+            <name>Histórias</name>
+        </sections>
+        <sections>
+            <label><!-- Impediments --></label>
+            <name>Impediments</name>
+        </sections>
+        <sections>
+            <label><!-- Releases --></label>
+            <name>Releases</name>
+        </sections>
+        <sections>
+            <label><!-- Sprints --></label>
+            <name>Sprints</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Releases com Sprints com Sprint Burndown --></description>
+        <label><!-- Releases com Sprints com Sprint Burndown --></label>
+        <name>Releases_com_Sprints_com_Sprint_Burndown</name>
+        <sections>
+            <label><!-- Releases --></label>
+            <name>Releases</name>
+        </sections>
+        <sections>
+            <label><!-- Sprint Burndown --></label>
+            <name>Sprint Burndown</name>
+        </sections>
+        <sections>
+            <label><!-- Sprints --></label>
+            <name>Sprints</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Sprints with Histories with Incidents --></description>
+        <label><!-- Sprints with Histories with Incidents --></label>
+        <name>Sprints_with_Histories_with_Incidents</name>
+        <sections>
+            <label><!-- Histórias --></label>
+            <name>Histórias</name>
+        </sections>
+        <sections>
+            <label><!-- Incidentes --></label>
+            <name>Incidentes</name>
+        </sections>
+        <sections>
+            <label><!-- Sprints --></label>
+            <name>Sprints</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Screen Flows --></description>
+        <label><!-- Screen Flows --></label>
+        <name>screen_flows_prebuilt_crt</name>
+        <sections>
+            <label><!-- Flow Interview Log Entries --></label>
+            <name>Flow Interview Log Entries</name>
+        </sections>
+        <sections>
+            <label><!-- Flow Interview Logs --></label>
+            <name>Flow Interview Logs</name>
+        </sections>
+    </reportTypes>
+</Translations>

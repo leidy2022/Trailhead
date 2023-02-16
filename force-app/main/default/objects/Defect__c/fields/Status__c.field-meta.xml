@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <color>#0B6FCE</color>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Ready to Test</fullName>
+                <default>false</default>
+                <label>Ready to Test</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+            <value>
+                <fullName>Fixed</fullName>
+                <color>#33CC00</color>
+                <default>false</default>
+                <label>Fixed</label>
+            </value>
+            <value>
+                <fullName>Melhoria</fullName>
+                <default>false</default>
+                <label>Melhoria</label>
+            </value>
+            <value>
+                <fullName>Erro de procedimento</fullName>
+                <default>false</default>
+                <label>Erro de procedimento</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

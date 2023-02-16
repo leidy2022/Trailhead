@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APMT_Compact_Layout_Component</fullName>
+    <fields>Name</fields>
+    <fields>Action_Type__c</fields>
+    <fields>Component_Type__c</fields>
+    <fields>API__c</fields>
+    <fields>TestClass__c</fields>
+    <label>APMT - Compact Layout Component</label>
+</CompactLayout>

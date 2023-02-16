@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Concluded_Needs_Components</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status__c, &quot;Concluded&quot;),
+NumberComponents__c = 0,
+NOT(TaskWithoutComponents__c)
+)</errorConditionFormula>
+    <errorDisplayField>TaskWithoutComponents__c</errorDisplayField>
+    <errorMessage>Please inform which components where created for this Task. If no components where created, please specify in the checkbox &quot;Task Without Components&quot;.</errorMessage>
+</ValidationRule>

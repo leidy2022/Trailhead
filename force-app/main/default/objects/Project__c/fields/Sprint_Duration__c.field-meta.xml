@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sprint_Duration__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the default standard sprint duration.  This default may be overridden when setting up individual sprints.</inlineHelpText>
+    <label>Sprint Duration (Weeks)</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

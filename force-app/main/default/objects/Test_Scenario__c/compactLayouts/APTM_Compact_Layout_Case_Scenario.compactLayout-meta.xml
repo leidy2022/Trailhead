@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APTM_Compact_Layout_Case_Scenario</fullName>
+    <fields>Name</fields>
+    <fields>User_Story__c</fields>
+    <label>APTM - Compact Layout Case Scenario</label>
+</CompactLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APMT_CannotChangeSequenceSprintProgress</fullName>
+    <active>false</active>
+    <description>You cannot change the story sequence in a sprint in progress.</description>
+    <errorConditionFormula>AND(
+ISCHANGED( Sequence__c ),
+ SprintStatus__c == &apos;In Progress&apos;
+)</errorConditionFormula>
+    <errorMessage>You cannot change the story sequence in a sprint in progress.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APMT_Compact_Layout_Epic</fullName>
+    <fields>Name</fields>
+    <fields>Descricao__c</fields>
+    <fields>Project__c</fields>
+    <label>APMT - Compact Layout Epic</label>
+</CompactLayout>

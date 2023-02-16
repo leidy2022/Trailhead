@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReleaseBacklog__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that this release is for the Product Backlog.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that this release is for the Product Backlog.</inlineHelpText>
+    <label>Release Backlog</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

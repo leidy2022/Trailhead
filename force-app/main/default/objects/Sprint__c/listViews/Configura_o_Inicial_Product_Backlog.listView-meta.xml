@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Configura_o_Inicial_Product_Backlog</fullName>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ProductBacklog__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>(Configuração Inicial) Product Backlog</label>
+</ListView>

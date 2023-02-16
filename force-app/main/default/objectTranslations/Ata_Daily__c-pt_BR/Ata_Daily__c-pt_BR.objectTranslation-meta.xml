@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ata Daily</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Atas Dailys</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Ata Interna</layout>
+        <sections>
+            <label></label>
+            <section>Links personalizados</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Participantes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Layout de Ata Daily</layout>
+        <sections>
+            <label></label>
+            <section>Links personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Enviar_email</name>
+    </quickActions>
+    <recordTypes>
+        <label></label>
+        <name>DailyInterna</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>DailyYpe</name>
+    </recordTypes>
+</CustomObjectTranslation>

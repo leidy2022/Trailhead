@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ata_Daily__c</fullName>
+    <externalId>false</externalId>
+    <label>Ata Daily</label>
+    <referenceTo>Ata_Daily__c</referenceTo>
+    <relationshipLabel>Impedimentos relacionados</relationshipLabel>
+    <relationshipName>Impedimentos_relacionados</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

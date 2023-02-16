@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size:20px;&quot;&gt;&lt;b&gt;APMT INITIAL SETUP&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;b&gt;Step 1.&lt;/b&gt; Create your Project. You can create more than one project, if it&amp;#39;s necessary. Remember that all steps below must be performed for &lt;b&gt;each project that you create.&amp;nbsp;&lt;/b&gt;.</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>enableInlineEdit</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>entityName</name>
+                    <value>Project__c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>filterName</name>
+                    <value>Projetos_Ativos</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideActionBar</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideSearchBar</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>pageSize</name>
+                    <value>3</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:filterListCard</componentName>
+                <identifier>flexipage_filterListCard</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;b&gt;Setep 2. &lt;/b&gt;Create a Release with the name &amp;quot;Release Backlog&amp;quot;. Rememberto to check the flag &amp;quot;Release Backlog? while doing it. If you have more than one project, you should use the pattern &amp;quot;Project Name - Release Backlog&amp;quot; as the name of the record.</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText3</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>enableInlineEdit</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>entityName</name>
+                    <value>Release__c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>filterName</name>
+                    <value>All</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideActionBar</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideSearchBar</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>pageSize</name>
+                    <value>3</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:filterListCard</componentName>
+                <identifier>flexipage_filterListCard2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;b&gt;Step 3. &lt;/b&gt;Create a Sprint with the name &amp;quot;Product Backlog&amp;quot;. Rememberto to check the flag &amp;quot;Product Backlog? while doing it. If you have more than one project, you should use the pattern &amp;quot;Project Name - Product Backlog&amp;quot; as the name of the record. Relate this sprint with the Release Backlog you&amp;#39;ve created in the step above.</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText4</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>enableInlineEdit</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>entityName</name>
+                    <value>Sprint__c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>filterName</name>
+                    <value>Configura_o_Inicial_Product_Backlog</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideActionBar</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideSearchBar</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>pageSize</name>
+                    <value>3</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:filterListCard</componentName>
+                <identifier>flexipage_filterListCard3</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;b&gt;Step 4. &lt;/b&gt;After completing the actions above, perform these next steaps to get the best of the tool.&lt;br /&gt;
+&amp;nbsp;
+&lt;ul&gt;
+	&lt;li&gt;Verify the language configured for the users;&lt;/li&gt;
+	&lt;li&gt;Change the values for the picklist &amp;quot;Theme&amp;quot; of the object &amp;quot;Work&amp;quot; for your project&amp;#39;s Themes.&lt;/li&gt;
+&lt;/ul&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText5</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size:20px;&quot;&gt;&lt;b&gt;NEXT STEPS&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText6</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;u&gt;&lt;b&gt;Creating Stories and Dealing with the Sequence of execution&lt;/b&gt;&lt;/u&gt;&lt;br /&gt;
+&amp;nbsp;
+&lt;ul&gt;
+	&lt;li&gt;Create User Stories (Work) and associate them to the Product Backlog Record that you created.&amp;nbsp;&lt;/li&gt;
+	&lt;li&gt;For each story, a sequence will be defined automatically. This sequence will be used to define the priority for the funcionalities desired.&amp;nbsp;&lt;/li&gt;
+	&lt;li&gt;You can reorder the user Stories as you wish. When you change the number in the &amp;ldquo;Sequence&amp;rdquo; field, remember to refresh the List View to see the result. All other Stories will be reorganized as well.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;u&gt;&lt;b&gt;Creating a Sprint and Associating Stories to it&lt;/b&gt;&lt;/u&gt;&lt;br /&gt;
+&amp;nbsp;
+&lt;ul&gt;
+	&lt;li&gt;Now you can create your first Sprint. When you do it, set the Start and End Dates (as the information you provided when creating the Project in &amp;ldquo;Sprint Duration&amp;rdquo;).&lt;/li&gt;
+	&lt;li&gt;Now you can associate Stories to your sprint. Keep in mind that only Stories that are estimated (Estimated Points field) can be included to a sprint.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;u&gt;&lt;b&gt;Start your Sprint&lt;/b&gt;&lt;/u&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;When you create a Sprint, the Sprint Status is set to Planned. To start a Sprint, change the Sprint Status to &amp;ldquo;In Progress&amp;rdquo;. When you do it, you&amp;rsquo;ll be able to see the Sprint Burndown chart in the Sprint record page. All the metrics will be calculed base in the Sprint Duration x Estimated Points.&lt;/li&gt;
+	&lt;li&gt;You can only have one Sprint in progress at a time (for the same Project). You can create how many sprints that you wish in the &amp;ldquo;Planned&amp;rdquo; status. Do it so you can have a roadmap of what should go out on the next Sprints.&lt;/li&gt;
+	&lt;li&gt;You are able to move the user Stories from Sprint or back to the Product Backlog. Sprint Metrics and Sprint Burndown will be automatically updated.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;b&gt;Moving Stories and Sequence Behavior&lt;/b&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;When you move one story from the Product Backlog to a Sprint, this story will enter as the last item in the sequence. The same happens when you move a Story between sprints.&lt;/li&gt;
+	&lt;li&gt;When you remove a story from a Sprint back to the Product Backlog, it will be the set as the first item of the sequence of the Product Backlog.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;b&gt;Important: Sprint Dates are not supposed to the change!&lt;/b&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;A Sprint have start and end dates, and they should not be changed. If there&amp;rsquo;s no time to finish one or more Stories in a sprint, you should move them to the next Sprint.&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText7</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size:20px;&quot;&gt;&lt;b&gt;SCRUM BOARD&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText8</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div&gt;
+&lt;p&gt;&lt;b&gt;The Scrum Board&lt;/b&gt; is one of the most important screens that the APMT application have. The main objective of this board is to give a complete and intiutive view of everything that is going on the Projects.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;b&gt;Column 1:&lt;/b&gt; In this column, you can see all the active Projects, the Product Backlog and the Planned Releases. This column is used for planning and prorization defining.&lt;br /&gt;
+&lt;br /&gt;
+&lt;b&gt;Column 2:&lt;/b&gt; In the second column, you can access the Sprint In progress (in order to analyse the Sprint Burndown, for example) and the open tasks. This view will show all your tasks thar were not completed.&lt;br /&gt;
+&lt;br /&gt;
+&lt;b&gt;Column 3:&lt;/b&gt; In this column, you can have access to all open Impediment, apart from the Defects.&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText9</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size:20px;&quot;&gt;&lt;b&gt;DASHBOARD&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText10</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;b&gt;The Project Dashboard&lt;/b&gt; gives you a consolidated view of the Project with the charts embbeded in the dashboard.&lt;br /&gt;
+&lt;br /&gt;
+Always be aware of the Sprint Velocity and how it evolves through time.&lt;br /&gt;
+&lt;br /&gt;
+Take note of the Team Occupation, so you can verify how much work everyone has in their hands, and choose the best way to allocate the workload.&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText11</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size:10px;&quot;&gt;Avanxo Project Management Tool&amp;nbsp;- v2.0&lt;/span&gt;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size:10px;&quot;&gt;Doubts or Suggestions:&amp;nbsp;lpereira@avanxo.com&lt;/span&gt;&lt;/div&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText12</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Initial Setup</masterLabel>
+    <template>
+        <name>flexipage:defaultAppHomeTemplate</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PlannedDateMandatoryNotReleaseBacklog</fullName>
+    <active>true</active>
+    <description>If the Release is not a Backlog release, it&apos;s necessary to inform the Planned Date.</description>
+    <errorConditionFormula>AND( 
+ISBLANK(PlannedDate__c),
+NOT(ReleaseBacklog__c)
+)</errorConditionFormula>
+    <errorDisplayField>PlannedDate__c</errorDisplayField>
+    <errorMessage>Please inform the Planned Date for this Release.</errorMessage>
+</ValidationRule>

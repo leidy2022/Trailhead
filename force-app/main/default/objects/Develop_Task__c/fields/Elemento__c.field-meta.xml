@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Elemento__c</fullName>
+    <externalId>false</externalId>
+    <label>Elemento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Consolidador__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ÁRVORE DE DECISÃO</fullName>
+                <default>false</default>
+                <label>ÁRVORE DE DECISÃO</label>
+            </value>
+            <value>
+                <fullName>AURA</fullName>
+                <default>false</default>
+                <label>AURA</label>
+            </value>
+            <value>
+                <fullName>BOTÕES</fullName>
+                <default>false</default>
+                <label>BOTÕES</label>
+            </value>
+            <value>
+                <fullName>CARGA DE DADOS</fullName>
+                <default>false</default>
+                <label>CARGA DE DADOS</label>
+            </value>
+            <value>
+                <fullName>CATEGORIAS</fullName>
+                <default>false</default>
+                <label>CATEGORIAS</label>
+            </value>
+            <value>
+                <fullName>CLASSES DE TESTE</fullName>
+                <default>false</default>
+                <label>CLASSES DE TESTE</label>
+            </value>
+            <value>
+                <fullName>CONSOLE DE ATENDIMENTO</fullName>
+                <default>false</default>
+                <label>CONSOLE DE ATENDIMENTO</label>
+            </value>
+            <value>
+                <fullName>CONTROLADOR</fullName>
+                <default>false</default>
+                <label>CONTROLADOR</label>
+            </value>
+            <value>
+                <fullName>FILAS</fullName>
+                <default>false</default>
+                <label>FILAS</label>
+            </value>
+            <value>
+                <fullName>FORMAS DE PAGAMENTO</fullName>
+                <default>false</default>
+                <label>FORMAS DE PAGAMENTO</label>
+            </value>
+            <value>
+                <fullName>FRETES</fullName>
+                <default>false</default>
+                <label>FRETES</label>
+            </value>
+            <value>
+                <fullName>GRUPO DE CONTAS E PREÇOS</fullName>
+                <default>false</default>
+                <label>GRUPO DE CONTAS E PREÇOS</label>
+            </value>
+            <value>
+                <fullName>INTERFACE DE USUARIO</fullName>
+                <default>false</default>
+                <label>INTERFACE DE USUARIO</label>
+            </value>
+            <value>
+                <fullName>LWC</fullName>
+                <default>false</default>
+                <label>LWC</label>
+            </value>
+            <value>
+                <fullName>NECESSIDADE DE THIRD PARTY</fullName>
+                <default>false</default>
+                <label>NECESSIDADE DE THIRD PARTY</label>
+            </value>
+            <value>
+                <fullName>OBJETO</fullName>
+                <default>false</default>
+                <label>OBJETO</label>
+            </value>
+            <value>
+                <fullName>ORDENS</fullName>
+                <default>false</default>
+                <label>ORDENS</label>
+            </value>
+            <value>
+                <fullName>ORIGENS</fullName>
+                <default>false</default>
+                <label>ORIGENS</label>
+            </value>
+            <value>
+                <fullName>PROCESSO DE APROVAÇÃO</fullName>
+                <default>false</default>
+                <label>PROCESSO DE APROVAÇÃO</label>
+            </value>
+            <value>
+                <fullName>PRODUTOS</fullName>
+                <default>false</default>
+                <label>PRODUTOS</label>
+            </value>
+            <value>
+                <fullName>PROFILE</fullName>
+                <default>false</default>
+                <label>PROFILE</label>
+            </value>
+            <value>
+                <fullName>REGRAS DE NEGOCIO</fullName>
+                <default>false</default>
+                <label>REGRAS DE NEGOCIO</label>
+            </value>
+            <value>
+                <fullName>REGRAS DE VALIDAÇÃO</fullName>
+                <default>false</default>
+                <label>REGRAS DE VALIDAÇÃO</label>
+            </value>
+            <value>
+                <fullName>RELATORIO</fullName>
+                <default>false</default>
+                <label>RELATORIO</label>
+            </value>
+            <value>
+                <fullName>REPORT DASHBOARD</fullName>
+                <default>false</default>
+                <label>REPORT DASHBOARD</label>
+            </value>
+            <value>
+                <fullName>SERVIÇO</fullName>
+                <default>false</default>
+                <label>SERVIÇO</label>
+            </value>
+            <value>
+                <fullName>SKILL</fullName>
+                <default>false</default>
+                <label>SKILL</label>
+            </value>
+            <value>
+                <fullName>SLA</fullName>
+                <default>false</default>
+                <label>SLA</label>
+            </value>
+            <value>
+                <fullName>STATUS</fullName>
+                <default>false</default>
+                <label>STATUS</label>
+            </value>
+            <value>
+                <fullName>STOREFRONT</fullName>
+                <default>false</default>
+                <label>STOREFRONT</label>
+            </value>
+            <value>
+                <fullName>TERMOS DE ACEITE</fullName>
+                <default>false</default>
+                <label>TERMOS DE ACEITE</label>
+            </value>
+            <value>
+                <fullName>TRIGGER</fullName>
+                <default>false</default>
+                <label>TRIGGER</label>
+            </value>
+            <value>
+                <fullName>VENDEDORES/MARKETPLACE</fullName>
+                <default>false</default>
+                <label>VENDEDORES/MARKETPLACE</label>
+            </value>
+            <value>
+                <fullName>WORKFLOW</fullName>
+                <default>false</default>
+                <label>WORKFLOW</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SETUP</controllingFieldValue>
+            <valueName>CONSOLE DE ATENDIMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SLA</controllingFieldValue>
+            <valueName>SLA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRIGGER</controllingFieldValue>
+            <valueName>TRIGGER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VENDEDORES/MARKETPLACE</controllingFieldValue>
+            <valueName>VENDEDORES/MARKETPLACE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISUAL</controllingFieldValue>
+            <valueName>STOREFRONT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WORKFLOW</controllingFieldValue>
+            <valueName>WORKFLOW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLASSE DE TESTE</controllingFieldValue>
+            <valueName>CLASSES DE TESTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONFIGURAÇÃO</controllingFieldValue>
+            <valueName>BOTÕES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONFIGURAÇÃO</controllingFieldValue>
+            <valueName>REGRAS DE VALIDAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASHBOARD</controllingFieldValue>
+            <valueName>REPORT DASHBOARD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GRUPO DE CONTAS</controllingFieldValue>
+            <valueName>GRUPO DE CONTAS E PREÇOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAYOUT</controllingFieldValue>
+            <controllingFieldValue>LIGHTNING</controllingFieldValue>
+            <valueName>INTERFACE DE USUARIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MOBILE</controllingFieldValue>
+            <controllingFieldValue>Apex</controllingFieldValue>
+            <valueName>CONTROLADOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MOBILE</controllingFieldValue>
+            <valueName>REGRAS DE NEGOCIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MOBILE</controllingFieldValue>
+            <controllingFieldValue>API</controllingFieldValue>
+            <valueName>SERVIÇO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OBJETO</controllingFieldValue>
+            <valueName>OBJETO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OMNI-CHANNEL</controllingFieldValue>
+            <controllingFieldValue>PERFIL</controllingFieldValue>
+            <valueName>FILAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OMNI-CHANNEL</controllingFieldValue>
+            <controllingFieldValue>PERFIL</controllingFieldValue>
+            <valueName>SKILL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OMNI-CHANNEL</controllingFieldValue>
+            <controllingFieldValue>PERFIL</controllingFieldValue>
+            <valueName>STATUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PERFIL</controllingFieldValue>
+            <valueName>PROFILE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APLICATIVO</controllingFieldValue>
+            <valueName>NECESSIDADE DE THIRD PARTY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APROVAÇÃO</controllingFieldValue>
+            <valueName>PROCESSO DE APROVAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ÁRVORE DE DECISÃO</controllingFieldValue>
+            <valueName>ÁRVORE DE DECISÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CANAIS DE ATENDIMENTO</controllingFieldValue>
+            <valueName>ORIGENS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CARGA</controllingFieldValue>
+            <valueName>CARGA DE DADOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CATEGORIAS</controllingFieldValue>
+            <valueName>CATEGORIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHECKOUT</controllingFieldValue>
+            <valueName>FORMAS DE PAGAMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHECKOUT</controllingFieldValue>
+            <valueName>FRETES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHECKOUT</controllingFieldValue>
+            <valueName>ORDENS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHECKOUT</controllingFieldValue>
+            <valueName>TERMOS DE ACEITE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRODUTOS</controllingFieldValue>
+            <valueName>PRODUTOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RELATORIO</controllingFieldValue>
+            <valueName>RELATORIO</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

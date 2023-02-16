@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PlannedDatesMandatoryNotProductBacklog</fullName>
+    <active>false</active>
+    <description>If this is not a Product Backlog, Planned Date are mandatory.</description>
+    <errorConditionFormula>AND(
+OR(
+ISBLANK(P_End_Date__c),
+ISBLANK(P_Str_Date__c)
+),
+NOT(ProductBacklog__c)
+)</errorConditionFormula>
+    <errorMessage>Please inform the Planned Start and End dates.</errorMessage>
+</ValidationRule>

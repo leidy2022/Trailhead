@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Imformation__c</fullName>
+    <description>To help IT to find the issue</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Lead name, account name, Opportunity id, or BBR number and so on to help IT to find the issue</inlineHelpText>
+    <label>Record Information</label>
+    <length>20</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

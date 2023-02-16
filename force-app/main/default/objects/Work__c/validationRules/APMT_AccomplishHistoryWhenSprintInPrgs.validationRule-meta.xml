@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APMT_AccomplishHistoryWhenSprintInPrgs</fullName>
+    <active>true</active>
+    <description>You can only accomplish a story when the related Sprint is In Progress.</description>
+    <errorConditionFormula>AND(
+TEXT(Work_Status__c) == &apos;Accomplished&apos;,
+NOT(SprintStatus__c ==  &apos;In Progress&apos;)
+)</errorConditionFormula>
+    <errorMessage>You can only accomplish a story when the related Sprint is In Progress.</errorMessage>
+</ValidationRule>

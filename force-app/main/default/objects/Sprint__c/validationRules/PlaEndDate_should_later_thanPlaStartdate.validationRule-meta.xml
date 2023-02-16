@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PlaEndDate_should_later_thanPlaStartdate</fullName>
+    <active>true</active>
+    <errorConditionFormula>P_End_Date__c &lt; P_Str_Date__c</errorConditionFormula>
+    <errorDisplayField>P_End_Date__c</errorDisplayField>
+    <errorMessage>Planned End Date should not be earlier than Planned Start Date</errorMessage>
+</ValidationRule>

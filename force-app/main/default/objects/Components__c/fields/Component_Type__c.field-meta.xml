@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Component_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Component Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alerta por Email do fluxo de trabalho</fullName>
+                <default>false</default>
+                <label>Alerta por Email do fluxo de trabalho</label>
+            </value>
+            <value>
+                <fullName>Aplicativos</fullName>
+                <default>false</default>
+                <label>Aplicativos</label>
+            </value>
+            <value>
+                <fullName>Atualização de Campo do Fluxo de Trabalho</fullName>
+                <default>false</default>
+                <label>Atualização de Campo do Fluxo de Trabalho</label>
+            </value>
+            <value>
+                <fullName>Botão ou Link</fullName>
+                <default>false</default>
+                <label>Botão ou Link</label>
+            </value>
+            <value>
+                <fullName>Campo personalizado</fullName>
+                <default>false</default>
+                <label>Campo personalizado</label>
+            </value>
+            <value>
+                <fullName>Classes Apex</fullName>
+                <default>false</default>
+                <label>Classes Apex</label>
+            </value>
+            <value>
+                <fullName>Componente de VisualForce</fullName>
+                <default>false</default>
+                <label>Componente de VisualForce</label>
+            </value>
+            <value>
+                <fullName>Componentes da home page</fullName>
+                <default>false</default>
+                <label>Componentes da home page</label>
+            </value>
+            <value>
+                <fullName>Definição da configuração personalizada</fullName>
+                <default>false</default>
+                <label>Definição da configuração personalizada</label>
+            </value>
+            <value>
+                <fullName>Fila</fullName>
+                <default>false</default>
+                <label>Fila</label>
+            </value>
+            <value>
+                <fullName>Grupo Público</fullName>
+                <default>false</default>
+                <label>Grupo Público</label>
+            </value>
+            <value>
+                <fullName>Guias</fullName>
+                <default>false</default>
+                <label>Guias</label>
+            </value>
+            <value>
+                <fullName>Layout Página</fullName>
+                <default>false</default>
+                <label>Layout Página</label>
+            </value>
+            <value>
+                <fullName>Layouts da Home Page</fullName>
+                <default>false</default>
+                <label>Layouts da Home Page</label>
+            </value>
+            <value>
+                <fullName>Marco</fullName>
+                <default>false</default>
+                <label>Marco</label>
+            </value>
+            <value>
+                <fullName>Modelo de Email</fullName>
+                <default>false</default>
+                <label>Modelo de Email</label>
+            </value>
+            <value>
+                <fullName>Modo de Exibição de Lista</fullName>
+                <default>false</default>
+                <label>Modo de Exibição de Lista</label>
+            </value>
+            <value>
+                <fullName>Objeto personalizado</fullName>
+                <default>false</default>
+                <label>Objeto personalizado</label>
+            </value>
+            <value>
+                <fullName>Páginas Visual Force</fullName>
+                <default>false</default>
+                <label>Páginas Visual Force</label>
+            </value>
+            <value>
+                <fullName>Painel</fullName>
+                <default>false</default>
+                <label>Painel</label>
+            </value>
+            <value>
+                <fullName>Papel</fullName>
+                <default>false</default>
+                <label>Papel</label>
+            </value>
+            <value>
+                <fullName>Papel Timbrado</fullName>
+                <default>false</default>
+                <label>Papel Timbrado</label>
+            </value>
+            <value>
+                <fullName>Pasta</fullName>
+                <default>false</default>
+                <label>Pasta</label>
+            </value>
+            <value>
+                <fullName>Perfil</fullName>
+                <default>false</default>
+                <label>Perfil</label>
+            </value>
+            <value>
+                <fullName>Processo Comercial</fullName>
+                <default>false</default>
+                <label>Processo Comercial</label>
+            </value>
+            <value>
+                <fullName>Processo de Habilitação</fullName>
+                <default>false</default>
+                <label>Processo de Habilitação</label>
+            </value>
+            <value>
+                <fullName>Processos de Aprovação</fullName>
+                <default>false</default>
+                <label>Processos de Aprovação</label>
+            </value>
+            <value>
+                <fullName>Recursos estáticos</fullName>
+                <default>false</default>
+                <label>Recursos estáticos</label>
+            </value>
+            <value>
+                <fullName>Regra de Fluxo de Trabalho</fullName>
+                <default>false</default>
+                <label>Regra de Fluxo de Trabalho</label>
+            </value>
+            <value>
+                <fullName>Regras de Compartilhamento</fullName>
+                <default>false</default>
+                <label>Regras de Compartilhamento</label>
+            </value>
+            <value>
+                <fullName>Regras de Validação</fullName>
+                <default>false</default>
+                <label>Regras de Validação</label>
+            </value>
+            <value>
+                <fullName>Relatório</fullName>
+                <default>false</default>
+                <label>Relatório</label>
+            </value>
+            <value>
+                <fullName>Rótulo Personalizado</fullName>
+                <default>false</default>
+                <label>Rótulo Personalizado</label>
+            </value>
+            <value>
+                <fullName>Tipo de Artigo</fullName>
+                <default>false</default>
+                <label>Tipo de Artigo</label>
+            </value>
+            <value>
+                <fullName>Tipo de Registro</fullName>
+                <default>false</default>
+                <label>Tipo de Registro</label>
+            </value>
+            <value>
+                <fullName>Tipo Relatório Personalizado</fullName>
+                <default>false</default>
+                <label>Tipo Relatório Personalizado</label>
+            </value>
+            <value>
+                <fullName>Triggers</fullName>
+                <default>false</default>
+                <label>Triggers</label>
+            </value>
+            <value>
+                <fullName>Versão do Fluxo (Process Builder)</fullName>
+                <default>false</default>
+                <label>Versão do Fluxo (Process Builder)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
