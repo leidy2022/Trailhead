@@ -20,12 +20,4 @@
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>
-    <webLinks>
-        <label></label>
-        <name>PDF</name>
-    </webLinks>
-    <webLinks>
-        <label></label>
-        <name>Run_Test</name>
-    </webLinks>
 </CustomObjectTranslation>

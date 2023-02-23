@@ -24,16 +24,4 @@
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>AcEndDate_should_later_than_AcStartDate</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>PlaEndDate_should_later_thanPlaStartdate</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>PlannedDatesMandatoryNotProductBacklog</name>
-    </validationRules>
 </CustomObjectTranslation>

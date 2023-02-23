@@ -28,12 +28,4 @@
         <name>APMT_Action_CreateComponent</name>
     </quickActions>
     <startsWith>Consonant</startsWith>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>Concluded_Needs_Components</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>Hrs_Spent_for_Close</name>
-    </validationRules>
 </CustomObjectTranslation>
