@@ -31,12 +31,4 @@
         <label></label>
         <name>Enviar_email</name>
     </quickActions>
-    <recordTypes>
-        <label></label>
-        <name>DailyInterna</name>
-    </recordTypes>
-    <recordTypes>
-        <label></label>
-        <name>DailyYpe</name>
-    </recordTypes>
 </CustomObjectTranslation>

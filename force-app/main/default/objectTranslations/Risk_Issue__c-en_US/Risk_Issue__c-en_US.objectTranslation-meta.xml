@@ -29,15 +29,5 @@
             <section>Links personalizados</section>
         </sections>
     </layouts>
-    <recordTypes>
-        <description></description>
-        <label></label>
-        <name>Issue</name>
-    </recordTypes>
-    <recordTypes>
-        <description></description>
-        <label></label>
-        <name>Risk</name>
-    </recordTypes>
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

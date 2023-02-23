@@ -36,28 +36,4 @@
         <name>APMT_CreateTask</name>
     </quickActions>
     <startsWith>Vowel</startsWith>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>APMT_AccomplishHistoryWhenSprintInPrgs</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>APMT_CannotChangeSequenceSprintProgress</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>APMT_HistoryStatusDependsSprintStatus</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>APMT_StoryInSprintEstimatedPoints</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>End_Date_should_be_later_than_Start_Date</name>
-    </validationRules>
-    <webLinks>
-        <label></label>
-        <name>PDF</name>
-    </webLinks>
 </CustomObjectTranslation>

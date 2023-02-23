@@ -58,6 +58,17 @@
     </customTabs>
     <flowDefinitions>
         <flows>
+            <screens>
+                <fields>
+                    <name>Hola</name>
+                </fields>
+                <name>Mensaje</name>
+            </screens>
+        </flows>
+        <fullName>Prueba_curso_git</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
             <choices>
                 <name>S_149a89f6_e93f_4402_b3c5_24148bee75c0</name>
             </choices>

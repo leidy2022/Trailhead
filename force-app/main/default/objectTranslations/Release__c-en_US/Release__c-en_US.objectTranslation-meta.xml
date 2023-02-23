@@ -20,8 +20,4 @@
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>
-    <validationRules>
-        <errorMessage></errorMessage>
-        <name>PlannedDateMandatoryNotReleaseBacklog</name>
-    </validationRules>
 </CustomObjectTranslation>
